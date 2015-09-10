@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Hover Plugin by nslabz</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+<p>{ nsHover } - a super simple jQuery plugin
+by <a href="http://www.nslabz.com">nslabz</a></p>
+
+<h1>Examples</h1>
+
+	<!-- different container with differen child images -->
+	<span class="container1"><img src="pics/1.jpg" alt=""></span>
+	<span class="container2"><img src="pics/2.jpg" alt=""></span>
+	<span class="container3"><img src="pics/3.jpg" alt=""></span>
+
+	<!-- one container with differen child images -->
+	<div class="container4">
+		<img src="pics/4.jpg" alt="">
+		<img src="pics/5.jpg" alt="">
+		<img src="pics/6.jpg" alt="">
+	</div>
+
+	<!-- one container with differen child images -->
+	<span class="container8 container"><img src="pics/1.jpg" alt=""></span>
+	<span class="container9 container"><img src="pics/3.jpg" alt=""></span>
+	<span class="container10 container"><img src="pics/5.jpg" alt=""></span>
+	
+	<!-- different container with differen child images -->
+	<div class="container5"><div class="box"><h3>Title</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi debitis odit saepe nesciunt reiciendis nostrum iste quidem, provident ipsum.</div></div>
+	<div class="container6"><div class="box"><h3>Title</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi debitis odit saepe nesciunt reiciendis nostrum iste quidem, provident ipsum.</div></div>
+	<div class="container7"><div class="box"><h3>Title</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi debitis odit saepe nesciunt reiciendis nostrum iste quidem, provident ipsum.</div></div>
+
+	<div class="clearfix"></div>
+
+	<div class="codes">
+	<h1>Usage</h1>
+	<p>Firstly, include the <code>ns.hover.min.js</code> just before the end body tag in your html</p>
+	<p><code>&lt;script src="src/ns.hover.min.js"&gt;&lt;/script&gt;</code></p>
+	<p>just call with the container class and set the options to customize the look and feel. (You must have to set a container class in order to make the child elemnts use this effect. child can be any html tags including images offcourse.)</p>
+<pre class="prettyprint">
+&lt;script&gt;
+$(container_class_or_id).nsHover({
+    scaling : false,
+    speed: 'normal',
+    rounded: 'normal',
+    bgcolor: '#ffffff',
+    bgopacity : 0.5,            
+    bgpic : 'imgs/lens.png',
+    bgsize : '50%',
+    bganim : 'fade',
+    border : 'none',
+    content: ''
+});
+&lt;/script&gt;
+</pre>
+	</div>
+
+	<div class="clearfix"></div>
+
+	<div class="settings">
+		<h1>Options</h1>
+
+		<div class="options">
+			<h2>scaling</h2>
+			<p>set this value to anything from 0.0 - 1.0 to make the element shrink on hover, or set it 0 / false to disable scaling effect</p>
+			<h4>Default Value:</h4><p>false</p>
+			<h4>Possible Values:</h4><p>false / 0 / 0.0 - 1.0</p>
+		</div>
+
+		<div class="options">
+			<h2>speed</h2>
+			<p>this options set the speed of the hover transitions and animation effects</p>
+			<h4>Default Value:</h4><p>normal</p>
+			<h4>Possible Values:</h4><p>normal / fast / slow</p>
+		</div>
+
+		<div class="options">
+			<h2>rounded</h2>
+			<p>Set this option to control the border radius of the element. you can set predefined values like circle or set any custom values you want.</p>
+			<h4>Default Value:</h4><p>normal</p>
+			<h4>Possible Values:</h4><p>none(0%) / normal(5%) / circle(50%) / xx% / xx px</p>
+		</div>
+
+		<div class="options">
+			<h2>bganim</h2>
+			<p>The background animation style of the overlay layer. Currently it is limited to Fade, Scale and Slide(from up) effecrs</p>
+			<h4>Default Value:</h4><p>fade</p>
+			<h4>Possible Values:</h4><p>fade / scale / slide</p>
+		</div>
+
+		<div class="options">
+			<h2>bgcolor</h2>
+			<p>The background color of the overlay layer.</p>
+			<h4>Default Value:</h4><p>normal</p>
+			<h4>Possible Values:</h4><p>none(0%) / normal(5%) / circle(50%) / xx% / xx px</p>
+		</div>
+
+		<div class="options">
+			<h2>bgopacity</h2>
+			<p>The background opacity of the overlay layer.</p>
+			<h4>Default Value:</h4><p>0.5</p>
+			<h4>Possible Values:</h4><p>0.0-1.0</p>
+		</div>
+
+		<div class="options">
+			<h2>bgpic</h2>
+			<p>The background image of the overlay layer.</p>
+			<h4>Default Value:</h4><p>imgs/lens.png</p>
+			<h4>Possible Values:</h4><p>any image url</p>
+		</div>
+
+		<div class="options">
+			<h2>bgsize</h2>
+			<p>The background image size of the overlay layer. It is centered by default</p>
+			<h4>Default Value:</h4><p>25%</p>
+			<h4>Possible Values:</h4><p>0% - 100%</p>
+		</div>
+ 
+		<div class="options">
+			<h2>shadow</h2>
+			<p>The box shadow of the main block. Enable / Disable it by setting true or false</p>
+			<h4>Default Value:</h4><p>false</p>
+			<h4>Possible Values:</h4><p>true / false</p>
+		</div>
+
+		<div class="options">
+			<h2>content</h2>
+			<p>If you want to show some text / icon / image on hover we have limited support for this also. you can set any valid html here, but be careful not to put much more content here or it will not look good. example : "click to buy", "know more" etc. you can style this content by external styles using classes</p>
+			<h4>Default Value:</h4><p>''</p>
+			<h4>Possible Values:</h4><p>any valid html content</p>
+		</div>
+
+	</div>
+
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+	<script src="src/ns.hover.min.js"></script>
+	<script>
+	window.onload = function(){
+		$.noConflict();
+		jQuery(document).ready(function($){
+
+			$('.container1').nsHover({
+	            bgcolor: '#000',
+	            bganim : 'fade'
+			});
+
+			$('.container2').nsHover({
+	            bgcolor: '#000',
+	            bganim : 'scale'
+			});
+
+			$('.container3').nsHover({
+	            bgcolor: '#000',
+	            bganim : 'slide'
+			});
+
+			$('.container4').nsHover({
+	            bgcolor: '#000',
+	            bganim : 'fade',
+	            bgpic: '',
+	            content: '<div class="content">Click Here</div>'
+			});
+
+			$('.container5').nsHover({
+				scaling: 0.9,
+	            bgcolor: '#000',
+	            bgcolor: '#000033',
+	            bganim : 'scale'
+			});
+
+			$('.container6').nsHover({
+				rounded: 'none',
+	            bgcolor: '#ffff00',
+	            bganim : 'slide'
+			});
+
+			$('.container7').nsHover({
+	            bgcolor: '#00ff00',
+	            bganim : 'fade'
+			});
+
+			$('.container8').nsHover({
+				rounded: 'circle',
+				scaling: 0.9,
+	            bgcolor: '#000',
+	            bganim : 'fade',
+	            bgsize: '20%',
+	            bgpic: '',
+	            content: '<div class="content">Click Here</div>'
+			});
+
+			$('.container9').nsHover({
+				rounded: 'circle',
+				scaling: 1.1,
+	            bgcolor: '#000',
+	            bganim : 'scale',
+	            bgpic: ''
+			});
+
+			$('.container10').nsHover({
+				scaling: 0.9,
+				rounded: 'circle',
+	            bgcolor: '#000',
+	            bganim : 'scale',
+	            bgsize: '20%'
+			});			
+
+		});
+	}
+	</script>
+</body>
+</html>
