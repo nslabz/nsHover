@@ -24,5 +24,5 @@ $(container_class_or_id).nsHover({
 </pre>
 
 For detail information, docs and exapmple please visit
-<a href="http://www.nslabz.com/plugins/ns.hover.1.0" target="_blank">nsHover Plugin by nslabz</a>
+<a href="http://www.nslabz.com/ns.hover.html" target="_blank">nsHover Plugin by nslabz</a>
 
