@@ -17,12 +17,12 @@ $(container_class_or_id).nsHover({
     bgpic : 'imgs/lens.png',
     bgsize : '50%',
     bganim : 'fade',
-    border : 'none',
+    shadow : false,
     content: ''
 });
 &lt;/script&gt;
 </pre>
 
 For detail information, docs and exapmple please visit
-<a href="http://wwww.nslabz.com/plugins/ns.hover.1.0">nsHover Plugin by nslabz</a>
+<a href="http://www.nslabz.com/plugins/ns.hover.1.0">nsHover Plugin by nslabz</a>
 
